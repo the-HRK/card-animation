@@ -1,0 +1,62 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background:rgb(0, 0, 0);
+    font-family: 'Poppins', sans-serif;
+}
+
+#box{
+    position: relative;
+    height: 400px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-inline: 10px;
+     color: rgb(213, 180, 180);
+    border: 5px solid transparent;
+    border-radius: 15px;
+    gap: 10px;
+    padding: 20px;
+    transition: all 0.4s ease;
+    
+}
+@property --borderAngle {
+    syntax: '<angle>';
+    initial-value: 0deg;
+    inherits: false;
+}
+
+@keyframes rotate {
+    to {
+        --borderAngle: 360deg;
+    }
+}
+
+#box:hover{
+     background:
+    /* actual content background */
+     linear-gradient(rgb(11, 11, 11), rgb(1, 1, 1)) padding-box,
+    /* your conic gradient border */
+     conic-gradient(
+    from var(--borderAngle),
+    rgb(14, 14, 14) 0deg,
+    rgb(253, 8, 224),black) border-box;
+   
+    box-shadow: 0px 0px 80px  rgb(247, 5, 162);
+    animation: rotate 3s linear infinite;
+    text-shadow: 0 0 10px rgb(255, 0, 170);
+    scale: 1.05;
+
+    }
+
+   
